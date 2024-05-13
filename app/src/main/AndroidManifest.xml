@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tmotions.wms">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:name=".common.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon_round"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/app_icon_circle"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.EmpWFHActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White2" />
+        <activity
+            android:name=".activities.NotificationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White2">
+
+          <!--  <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="wmsapp"/>
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".activities.ManagerLeaveSummaryDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White2" />
+        <activity
+            android:name=".activities.OnLeaveActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White2" />
+        <activity
+            android:name=".activities.ManagerViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar2" />
+        <activity
+            android:name=".activities.ActivityVerifyOTP"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White" />
+        <activity
+            android:name=".activities.ApplyLeaveActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White2" />
+        <activity
+            android:name=".activities.TeamRequest"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White2" />
+        <activity
+            android:name=".activities.ActivityCompanyHolidays"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White2" />
+        <activity
+            android:name=".activities.ActivityLeaveSummaryDetails"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White2" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="wmsapp"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White" />
+
+        <activity
+            android:name=".activities.HomeActivity"
+            android:exported="false"
+            android:label="Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.White2"
+            android:windowSoftInputMode="adjustPan">
+
+
+        </activity>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

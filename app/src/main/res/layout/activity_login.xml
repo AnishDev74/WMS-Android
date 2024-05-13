@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_background"
+        android:orientation="vertical">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/mprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorPrimaryDark" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/activity_margin_20dp"
+                    android:padding="@dimen/dimen_30">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        android:src="@drawable/splash"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothic_bold"
+                        android:text="WMS"
+                        android:textColor="@color/theme_text_color"
+                        android:textSize="@dimen/dimen_30"
+                        android:layout_marginTop="@dimen/padding_10dp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothic_bold"
+                        android:text="Workforce Management System"
+                        android:textColor="@color/theme_text_color"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/padding_10dp"  />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothic_bold"
+                        android:text="Log in to your account"
+                        android:textColor="@color/theme_text_color"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dimen_100" />
+
+                    <LinearLayout
+                        android:id="@+id/loutEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/dimen_30"
+                        android:background="@drawable/edittext_border"
+                        android:weightSum="2"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/edtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_48dp"
+                            android:fontFamily="@font/gothic_regular"
+                            android:inputType="textEmailAddress|textNoSuggestions"
+                            android:imeOptions="actionDone"
+                            android:paddingStart="@dimen/padding_10dp"
+                            android:paddingEnd="@dimen/padding_10dp"
+                            android:gravity="center"
+                            android:background="@null"
+                            android:singleLine="true"
+                            android:hint="@string/email_address"
+                            android:textColorHint="@color/color_5B5B5B"
+                            android:textColor="@color/color_5B5B5B"
+                            android:textSize="@dimen/text_size_15sp" />
+
+                     </LinearLayout>
+                    <TextView
+                        android:id="@+id/textErrorEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gothic_regular"
+                        android:gravity="center|start"
+                        android:text="@string/please_provide_a_valid_email_address"
+                        android:textColor="@color/color_alert"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:layout_marginStart="@dimen/padding_10dp"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnSendOtp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_30"
+                        android:background="@drawable/btn_verify"
+                        android:fontFamily="@font/gothic_bold"
+                        android:text="Send OTP"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_17sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
+

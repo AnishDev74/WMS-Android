@@ -1,0 +1,2 @@
+rootProject.name = "Wms"
+include ':app'

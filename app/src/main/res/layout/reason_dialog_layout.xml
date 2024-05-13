@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10dp"
+        android:background="@drawable/alert_dialog_rounded_corner">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size_20sp"
+            android:fontFamily="@font/gothic_bold"
+            android:text="Reason"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="@dimen/_12dp"
+            android:background="@drawable/rounded_border"
+            android:gravity="center"
+            android:padding="@dimen/padding_10dp">
+
+            <EditText
+                android:id="@+id/edtReason"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:focusableInTouchMode="true"
+                android:gravity="top"
+                android:hint="@string/please_provide_a_reason"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/text_size_14sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textErrorReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic_regular"
+            android:gravity="center|start"
+            android:text="@string/please_provide_a_reason_for_the_decline"
+            android:textColor="@color/color_alert"
+            android:textSize="12dp"
+            android:layout_marginStart="@dimen/padding_10dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginEnd="@dimen/dimen_30"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/padding_10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_cancel_rounded"
+                android:fontFamily="@font/gothic_bold"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_17sp" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/padding_10dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_age_yes"
+                android:fontFamily="@font/gothic_bold"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_17sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

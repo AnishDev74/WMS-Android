@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_10dp"
+    android:gravity="center"
+    android:weightSum="2">
+
+    <TextView
+        android:id="@+id/txtLeaveType"
+        android:layout_width="@dimen/dimen_50"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothic_regular"
+        android:gravity="left"
+        android:text="WFM"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <TextView
+        android:id="@+id/txtLeaveDate"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothic_regular"
+        android:gravity="left"
+         android:text="14 May"
+        android:paddingStart="@dimen/dimen_30"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <TextView
+        android:id="@+id/txtLeaveStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/gothic_regular"
+        android:gravity="left"
+        android:paddingStart="@dimen/dimen_20"
+         android:text="Pending"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <ImageView
+        android:id="@+id/imgViewDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:src="@drawable/icon_eye" />
+
+</LinearLayout>

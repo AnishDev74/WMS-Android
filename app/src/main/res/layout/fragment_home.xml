@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_background"
+        android:orientation="vertical"
+        tools:context=".fragments.HomeFragment">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/mprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorPrimaryDark" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewCalender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/_5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/previous"
+                        android:layout_width="40dip"
+                        android:layout_height="30dip"
+                        android:layout_alignRight="@+id/title">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/calender_left" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_height="30dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="month, 2020"
+                        android:textColor="#333333"
+                        android:textSize="16dip"
+                        android:textStyle="bold" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/next"
+                        android:layout_width="40dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/calender_right" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lout_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:id="@+id/lbl_sun"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/sun" />
+
+                    <TextView
+                        android:id="@+id/lbl_mon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/mon" />
+
+                    <TextView
+                        android:id="@+id/lbl_tue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/tue" />
+
+                    <TextView
+                        android:id="@+id/lbl_wed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/wed" />
+
+                    <TextView
+                        android:id="@+id/lbl_thu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/thu" />
+
+                    <TextView
+                        android:id="@+id/lbl_fri"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/fri" />
+
+                    <TextView
+                        android:id="@+id/lbl_sat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/sat" />
+
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lout_days"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_5dp"
+                    android:horizontalSpacing="1dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="7"
+                    android:verticalSpacing="1dp" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmerFrameLayoutCalender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/lout_days"
+                    android:visibility="gone">
+
+                    <include layout="@layout/calender_placeholder" />
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gridview"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtLeaveBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothic_bold"
+                android:paddingStart="@dimen/padding_10dp"
+                android:paddingEnd="@dimen/padding_10dp"
+                android:text="Leave Balance"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18sp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5dp"
+                android:paddingEnd="@dimen/_5dp"
+                android:visibility="gone" />
+
+<!--            <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                android:id="@+id/shimmerFrameLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <include layout="@layout/leave_balance_placeholder" />-->
+
+<!--            </com.facebook.shimmer.ShimmerFrameLayout>-->
+            <LinearLayout
+                android:id="@+id/shimmerHomeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/gif_home_fragment_shimmer"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

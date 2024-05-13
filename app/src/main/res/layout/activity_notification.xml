@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.NotificationActivity"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/headerLayout"
+            layout="@layout/headerlayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNotification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/shimmerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:layout_marginTop="-20dp"
+                android:src="@drawable/gif_notification_shimmer"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/routNoData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4">
+
+            <TextView
+                android:id="@+id/txtErrorDetails"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/gothic_regular"
+                android:gravity="center"
+                android:text="@string/no_data_found"
+                android:textSize="@dimen/text_size_18sp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_background"
+        android:orientation="vertical"
+        tools:context=".activities.OnLeaveActivity">
+
+        <include
+            android:id="@+id/headerLayout"
+            layout="@layout/headerlayout" />
+
+        <LinearLayout
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_20">
+
+            <ImageView
+                android:id="@+id/imgLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_calender_left" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gothic_bold"
+                android:paddingStart="@dimen/padding_10dp"
+                android:paddingEnd="@dimen/padding_10dp"
+                android:text="On Leave"
+                android:textColor="@color/color_E36D02"
+                android:textSize="@dimen/textsize_14sp" />
+
+
+            <ImageView
+                android:id="@+id/imgRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/icon_calender_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/padding_10dp"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:paddingStart="@dimen/_5dp"
+            android:paddingEnd="@dimen/_5dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTypes">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/padding_10dp"
+                android:text="Employee Name"
+                android:textSize="@dimen/text_size_16sp"
+                android:fontFamily="@font/gothic_bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/gothic_bold"
+                android:text="Type"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOnLeave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/shimmerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/gif_onleave"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/routNoData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4">
+
+            <TextView
+                android:id="@+id/txtErrorDetails"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/gothic_regular"
+                android:gravity="center"
+                android:text="@string/no_data_found"
+                android:textSize="@dimen/text_size_18sp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

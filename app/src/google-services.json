@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "301935871925",
+    "project_id": "wms-android-85ddb",
+    "storage_bucket": "wms-android-85ddb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301935871925:android:8a9fe6cc317b5935887bfc",
+        "android_client_info": {
+          "package_name": "com.tmotions.wms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "301935871925-p2ncfvc3o4nm0904epq4g8mlpku7s9et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdO-j45RajaXDl45ur-iaI94i24gtqQVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "301935871925-p2ncfvc3o4nm0904epq4g8mlpku7s9et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

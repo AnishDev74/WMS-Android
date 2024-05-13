@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_10dp"
+    android:weightSum="3"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="0dp"
+        android:layout_weight=".8"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothic_regular"
+        android:gravity="left|center"
+        android:text="01 Jan"
+        android:textSize="@dimen/text_size_15sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txtLeaveName"
+        android:layout_width="0dp"
+        android:layout_weight="1.1"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothic_regular"
+        android:gravity="left|center"
+        android:text="New Year"
+        android:textSize="@dimen/text_size_15sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txtLeaveType"
+        android:layout_width="0dp"
+        android:layout_weight="1.1"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothic_regular"
+        android:gravity="center"
+        android:text="Gazetted"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_size_15sp"
+       />
+
+</LinearLayout>

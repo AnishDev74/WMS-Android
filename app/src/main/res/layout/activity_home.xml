@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/rout_root"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/headerLayout"
+            layout="@layout/dashboardheaderlayout" />
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/headerLayout"
+            android:layout_above="@+id/loutFooter"/>
+
+        <LinearLayout
+            android:id="@+id/loutFooter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bottomnavigationbg"
+            android:layout_alignParentBottom="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/routHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/viewHome"
+                    android:layout_height="3dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_home_selected" />
+
+                    <TextView
+                        android:id="@+id/txtHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgHome"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gothic_bold"
+                        android:gravity="center"
+                        android:text="Home"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/routSummary"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/viewSummary"
+                    android:layout_height="3dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:visibility="invisible"/>
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imgSummary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_summary" />
+
+                    <TextView
+                        android:id="@+id/txtSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgSummary"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gothic_bold"
+                        android:gravity="center"
+                        android:text="Summary"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/routApply"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/viewApply"
+                    android:layout_height="3dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:visibility="invisible"/>
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imgApply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_apply" />
+
+                    <TextView
+                        android:id="@+id/txtApply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgApply"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gothic_bold"
+                        android:gravity="center"
+                        android:text="Apply"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/padding_15dp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/routWfh"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/viewShort"
+                    android:layout_height="3dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:visibility="invisible"/>
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imgWfh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/short_leave_inactive" />
+
+                    <TextView
+                        android:id="@+id/txtWfh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgWfh"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gothic_bold"
+                        android:gravity="center"
+                        android:text="Short"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/routOverTime"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/viewOverTime"
+                    android:layout_height="3dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:visibility="invisible"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_5dp">
+
+                    <ImageView
+                        android:id="@+id/imgOvertime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/icon_overtime" />
+
+                    <TextView
+                        android:id="@+id/txtOverTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgOvertime"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gothic_bold"
+                        android:gravity="center"
+                        android:text="Overtime"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

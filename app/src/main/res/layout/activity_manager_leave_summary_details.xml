@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/screen_background"
+        android:orientation="vertical"
+        tools:context=".activities.ManagerLeaveSummaryDetailsActivity">
+
+        <include
+            android:id="@+id/headerLayout"
+            layout="@layout/headerlayout" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/mprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:id="@+id/shimmerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/gif_leave_details_new" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/loutRoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/activity_margin_10dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_10dp">
+
+                            <TextView
+                                android:id="@+id/lblAppliedOn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Applied On"
+                                android:textColor="@color/color_E36D02"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                            <TextView
+                                android:id="@+id/txtAppliedOn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="03/04/2023 11:04 AM"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/activity_margin_20dp">
+
+                            <TextView
+                                android:id="@+id/txt_leavestatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/activity_margin_14dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_margin_10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp">
+
+                            <TextView
+                                android:id="@+id/lbl_leavecategory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Type"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtLeaveType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:text="RH"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_margin_15dp"
+                            android:layout_marginEnd="@dimen/activity_margin_15dp"
+                            android:background="@color/bordergrey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Category"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtCategory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:text="Restricted Holiday"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_margin_15dp"
+                            android:layout_marginEnd="@dimen/activity_margin_15dp"
+                            android:background="@color/bordergrey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Date"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtFromdate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:text="14 Apr 2023"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_margin_15dp"
+                            android:layout_marginEnd="@dimen/activity_margin_15dp"
+                            android:background="@color/bordergrey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Session"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtFromsession"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:text="Session 1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_margin_15dp"
+                            android:layout_marginEnd="@dimen/activity_margin_15dp"
+                            android:background="@color/bordergrey"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="To Date"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtTodate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:text="14 Apr 2023 "
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_margin_15dp"
+                            android:layout_marginEnd="@dimen/activity_margin_15dp"
+                            android:background="@color/bordergrey"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="To Session"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtTosession"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:text="Session 2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_margin_15dp"
+                            android:layout_marginEnd="@dimen/activity_margin_15dp"
+                            android:background="@color/bordergrey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="No. of Days"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtNumDays"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_margin_15dp"
+                            android:layout_marginEnd="@dimen/activity_margin_15dp"
+                            android:background="@color/bordergrey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="@string/reason"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:text="No Reason"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_margin_10dp"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Status"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:text="Approved"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_margin_15dp"
+                            android:layout_marginEnd="@dimen/activity_margin_15dp"
+                            android:background="@color/bordergrey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/activity_margin_15dp">
+
+                            <TextView
+                                android:id="@+id/lblPendingWith"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Pending With"
+                                android:textColor="@color/color_75869A"
+                                android:textSize="@dimen/activity_margin_14dp" />
+
+                            <TextView
+                                android:id="@+id/txtPendingWith"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/gothic_regular"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/activity_margin_15dp"
+                            android:layout_marginEnd="@dimen/activity_margin_15dp"
+                            android:background="@color/bordergrey" />
+
+                        <LinearLayout
+                            android:id="@+id/leave_balance_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/padding_15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/empLeaveBalance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Employee Leave Balance"
+                                android:textSize="@dimen/activity_margin_14dp"
+                                android:textColor="@color/color_75869A"
+                                android:fontFamily="@font/gothic_bold" />
+
+                            <LinearLayout
+                                android:id="@+id/earnedLeaveLinearLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="75dp"
+                                android:layout_marginTop="@dimen/padding_10dp"
+                                android:layout_marginBottom="@dimen/padding_10dp"
+                                android:background="@drawable/shadow_background"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <View
+                                    android:id="@+id/viewLine"
+                                    android:layout_width="2dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/colorPrimary" />
+
+
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="@dimen/padding_10dp"
+                                    android:layout_marginBottom="@dimen/padding_10dp"
+                                    android:background="@color/bordergrey" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/padding_10dp">
+
+                                    <TextView
+                                        android:id="@+id/earnedLeaveTxtView"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="2"
+                                        android:fontFamily="@font/gothic_bold"
+                                        android:text="Earned Leave"
+                                        android:textColor="@color/color_104578"
+                                        android:textSize="@dimen/text_size_14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/txtGranted"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_gravity="center_vertical"
+                                            android:fontFamily="@font/gothic"
+                                            android:text="Granted (0.0)"
+                                            android:textColor="@color/black"
+                                            android:textSize="10sp" />
+
+
+                                        <TextView
+                                            android:id="@+id/txtAvailed"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_gravity="center_vertical"
+                                            android:fontFamily="@font/gothic"
+                                            android:text="Availed (-100.0)"
+                                            android:textColor="@color/black"
+                                            android:textSize="10sp" />
+
+                                        <TextView
+                                            android:id="@+id/txtCarryForward"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:layout_gravity="center_vertical"
+                                            android:fontFamily="@font/gothic_bold"
+                                            android:text="Carry Forward (5)"
+                                            android:textColor="@color/color_5b5b5b"
+                                            android:textSize="10sp" />
+
+                                    </LinearLayout>
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/clSlLinearLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+
+                                <LinearLayout
+                                    android:id="@+id/casualLeaveLinearLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="@dimen/padding_10dp"
+                                    android:layout_marginBottom="@dimen/padding_10dp"
+                                    android:background="@drawable/shadow_background"
+                                    android:layout_marginRight="2dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <View
+                                        android:id="@+id/viewLineCl"
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/cl" />
+
+
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/padding_10dp"
+                                        android:layout_marginBottom="@dimen/padding_10dp"
+                                        android:background="@color/bordergrey" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/padding_5dp">
+
+                                        <TextView
+                                            android:id="@+id/casualLeaveTxtView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gothic_bold"
+                                            android:text="Casual Leave(1.0)"
+                                            android:textColor="@color/cl"
+                                            android:textSize="@dimen/text_size_14sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/clGrantedTxtView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/gothic"
+                                                android:text="Granted (0.0)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10sp" />
+                                            <TextView
+                                                android:id="@+id/clAvailedTxtView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/gothic"
+                                                android:text="Availed (-94.0)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10sp" />
+
+
+
+                                        </LinearLayout>
+
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/sickLeaveLinearLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="@dimen/padding_10dp"
+                                    android:layout_marginBottom="@dimen/padding_10dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/shadow_background"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <View
+                                        android:id="@+id/viewLineSl"
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/sl" />
+
+
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/padding_10dp"
+                                        android:layout_marginBottom="@dimen/padding_10dp"
+                                        android:background="@color/bordergrey" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/padding_5dp">
+
+                                        <TextView
+                                            android:id="@+id/sickLeaveTxtView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gothic_bold"
+                                            android:text="Sick Leave(1.0)"
+                                            android:textColor="@color/sl"
+                                            android:textSize="@dimen/text_size_14sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/slGrantedTxtView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/gothic"
+                                                android:text="Granted (0.0)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10sp" />
+                                            <TextView
+                                                android:id="@+id/slAvailedTxtView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/gothic"
+                                                android:text="Availed (-98.0)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10sp" />
+
+
+
+                                        </LinearLayout>
+
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/coRhLinearLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+
+
+                                <LinearLayout
+                                    android:id="@+id/compOffLeaveLinearLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginRight="2dp"
+                                    android:layout_marginTop="@dimen/padding_10dp"
+                                    android:layout_marginBottom="@dimen/padding_10dp"
+                                    android:background="@drawable/shadow_background"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <View
+                                        android:id="@+id/viewLineCo"
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/co" />
+
+
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/padding_10dp"
+                                        android:layout_marginBottom="@dimen/padding_10dp"
+                                        android:background="@color/bordergrey" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/padding_5dp">
+
+                                        <TextView
+                                            android:id="@+id/compOffTxtView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gothic_bold"
+                                            android:text="Comp-Off(1.0)"
+                                            android:textColor="@color/co"
+                                            android:textSize="@dimen/text_size_14sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/coGrantedTxtView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/gothic"
+                                                android:text="Granted (0.0)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10sp" />
+                                            <TextView
+                                                android:id="@+id/coAvailedTxtView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/gothic"
+                                                android:text="Availed (-103.5)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10sp" />
+
+
+
+                                        </LinearLayout>
+
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/rHLeaveLinearLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginTop="@dimen/padding_10dp"
+                                    android:layout_marginBottom="@dimen/padding_10dp"
+                                    android:background="@drawable/shadow_background"
+                                    android:orientation="horizontal"
+                                    android:weightSum="2">
+
+                                    <View
+                                        android:id="@+id/viewLineRH"
+                                        android:layout_width="2dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/rh" />
+
+
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/padding_10dp"
+                                        android:layout_marginBottom="@dimen/padding_10dp"
+                                        android:background="@color/bordergrey" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="2"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/padding_5dp">
+
+                                        <TextView
+                                            android:id="@+id/rHLeaveTxtView"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/gothic_bold"
+                                            android:text="Restricted Holiday(1.0)"
+                                            android:textColor="@color/rh"
+                                            android:textSize="@dimen/text_size_14sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_marginBottom="5dp"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/rHGrantedTxtView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/gothic"
+                                                android:text="Granted (0.0)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10sp" />
+                                            <TextView
+                                                android:id="@+id/rHAvailedTxtView"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:layout_gravity="center_vertical"
+                                                android:fontFamily="@font/gothic"
+                                                android:text="Availed (-100.0)"
+                                                android:textColor="@color/black"
+                                                android:textSize="10sp" />
+
+
+
+                                        </LinearLayout>
+
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/loutButtons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="@dimen/dimen_30"
+                            android:layout_marginTop="@dimen/dimen_20"
+                            android:layout_marginEnd="@dimen/dimen_30"
+                            android:layout_marginBottom="@dimen/dimen_20"
+                            android:weightSum="2">
+
+
+                            <Button
+                                android:id="@+id/btnDecline"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/padding_10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn_cancel_rounded"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Decline"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/text_size_17sp" />
+
+                            <Button
+                                android:id="@+id/btnAccept"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/padding_10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn_verify"
+                                android:fontFamily="@font/gothic_bold"
+                                android:text="Accept"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_17sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size_20sp"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:fontFamily="@font/gothic_bold"
+            android:text="Allow Location Access"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18sp" />
+
+
+        <TextView
+            android:id="@+id/txtMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:text="WMS uses your location to find where are you exactly "
+            android:textSize="16sp" />
+
+        <View
+            android:layout_height="@dimen/_1dp"
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:layout_marginTop="@dimen/dimen_20"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/txtNotnow"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic_bold"
+            android:text="Not Now"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_16sp"
+            android:paddingTop="@dimen/padding_15dp"
+            android:paddingBottom="@dimen/padding_15dp"/>
+
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="1dp"
+            android:background="@color/gray"
+           />
+
+        <TextView
+            android:id="@+id/txtContinue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic_bold"
+            android:text="Continue"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_16sp"
+            android:paddingTop="@dimen/padding_15dp"
+            android:paddingBottom="@dimen/padding_15dp"/>
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

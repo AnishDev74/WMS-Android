@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/_5dp"
+    android:paddingTop="@dimen/padding_10dp"
+    android:paddingEnd="@dimen/_5dp"
+    android:paddingBottom="@dimen/padding_10dp"
+    android:weightSum="2">
+
+    <TextView
+        android:id="@+id/txtEmpName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/padding_10dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/gothic"
+        android:text="Anna Paul"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15sp"
+        app:layout_constraintStart_toEndOf="@+id/leave_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtLeaveType"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fontFamily="@font/gothic"
+        android:gravity="center"
+        android:text="SL"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15sp"
+        app:layout_constraintStart_toEndOf="@+id/cancel_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</LinearLayout>

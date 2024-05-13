@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/_5dp"
+    android:paddingTop="@dimen/_5dp"
+    android:paddingEnd="@dimen/_5dp"
+    android:paddingBottom="@dimen/_5dp"
+    android:weightSum="2"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:focusable="true"
+        android:background="@drawable/notification_short_name">
+
+        <TextView
+            android:id="@+id/txtShortName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="BS"
+            android:fontFamily="@font/gothic_bold"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_15sp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/padding_15dp"
+        android:layout_marginStart="@dimen/padding_15dp"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/txtNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gothic_regular"
+        android:layout_gravity="center"
+        android:text="Black Smith has Approved your WFH "
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_14sp" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothic_bold"
+            android:gravity="end"
+            android:text="3m ago"
+            android:textColor="@color/color_5D5D5D"
+            android:textSize="@dimen/text_size_12sp" />
+    </LinearLayout>
+
+</LinearLayout>

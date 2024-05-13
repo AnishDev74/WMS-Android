@@ -1,0 +1,194 @@
+<resources>
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Theme.White" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">@color/screen_background</item>
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+    <!--    <item name="android:windowBackground">@color/colorPrimaryDark</item>-->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar2">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!--<item name="colorPrimary">@color/my_action_bar_color</item>-->
+    </style>
+
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="TextInputEditText" parent="ThemeOverlay.MaterialComponents.TextInputEditText.FilledBox.Dense">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="NavStyle" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--<style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>-->
+<!--
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/drawable_round_bottom_sheet</item>
+    </style>-->
+
+    <style name="spinner_style">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+
+    </style>
+
+    <style name="TopCornerCardview" parent="Widget.MaterialComponents.CardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/dimen_20</item>
+        <item name="cornerSizeTopLeft">@dimen/dimen_20</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="contentPadding">0dp</item>
+    </style>
+
+    <style name="HintTextSize" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">16sp</item>
+    </style>
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MYBottomSheetStyle</item>
+    </style>
+
+    <style name="MYBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="text_in_layout_error_hint_Style">
+        <item name="android:textColor">#00ff00</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="AlertDialogCustom_1" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppThemeSearchView" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/white</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+<!--
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/popup_background</item>
+    </style>-->
+
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@android:color/holo_blue_dark</item>
+        <item name="colorPrimary">@android:color/darker_gray</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@android:color/holo_orange_dark</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@android:color/holo_green_dark</item>
+    </style>
+
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_corner</item>
+    </style>
+
+    <style name="Theme.White2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">false</item>
+          <!--  <item name="android:windowBackground">@color/colorPrimaryDark</item>-->
+    </style>
+
+
+    <style name="custom_alert_button_text" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+</resources>
