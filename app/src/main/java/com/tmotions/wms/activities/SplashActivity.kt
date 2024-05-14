@@ -34,7 +34,8 @@ class SplashActivity : AppCompatActivity() {
 
     lateinit var binding: ActivitySplashBinding
     var appUpdateManager: AppUpdateManager? = null
-
+    val int = 0
+    val demo = "hi"
     override fun onCreate(savedInstanceState: Bundle?) {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         installSplashScreen()
@@ -48,6 +49,8 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.myLooper()!!).postDelayed(Runnable {
             proceedWithAppFlow()
         },3000)
+        print("Hello world")
+        print("Hello Tmotions")
         print("Hello world")
     }
     private fun checkUpdate() {
