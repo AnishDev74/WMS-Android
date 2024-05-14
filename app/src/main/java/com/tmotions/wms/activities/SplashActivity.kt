@@ -53,6 +53,7 @@ class SplashActivity : AppCompatActivity() {
         print("Hello Tmotions")
         print("Hello world")
         print("abc")
+        print("hii sir")
         print("new change")
     }
     private fun checkUpdate() {
