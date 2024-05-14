@@ -34,7 +34,8 @@ class SplashActivity : AppCompatActivity() {
 
     lateinit var binding: ActivitySplashBinding
     var appUpdateManager: AppUpdateManager? = null
-
+    val int = 0
+    val demo = "hi"
     override fun onCreate(savedInstanceState: Bundle?) {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         installSplashScreen()
