@@ -50,6 +50,7 @@ class SplashActivity : AppCompatActivity() {
             proceedWithAppFlow()
         },3000)
         print("Hello world")
+        print("Hello Tmotions")
     }
     private fun checkUpdate() {
         var appUpdateInfoTask = appUpdateManager!!.appUpdateInfo
