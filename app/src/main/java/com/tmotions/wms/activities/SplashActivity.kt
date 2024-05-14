@@ -49,6 +49,7 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.myLooper()!!).postDelayed(Runnable {
             proceedWithAppFlow()
         },3000)
+        println("hello")
     }
     private fun checkUpdate() {
         var appUpdateInfoTask = appUpdateManager!!.appUpdateInfo
